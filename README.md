@@ -35,7 +35,7 @@ PASTE YOUR CODE HERE
 3. Run the script in the same directory as your `README.md` file with the following command:
 
 ```
-python3 gpt_markdown_toggle.py
+python3 gpt_markdown_switch.py
 ```
 
 The script will automatically detect if your `README.md` is in custom markdown format or standard markdown format and convert it accordingly.

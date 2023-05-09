@@ -7,6 +7,7 @@ def modify_readme(readme_content):
         header, title = match.groups()
         return f'H{len(header)} {title.strip()}'
 
+
     header_pattern = re.compile(r'^(#+)(.*)$', re.MULTILINE)
     modified_content = header_pattern.sub(replace_header, readme_content)
 
@@ -23,6 +24,7 @@ def reverse_modifications(modified_content):
     def replace_reversed_header(match):
         header_level, title = int(match.group(1)), match.group(2)
         return f"{'#' * header_level} {title.strip()}"
+
 
     reversed_header_pattern = re.compile(r'^H(\d)(.*)$', re.MULTILINE)
     reversed_content = reversed_header_pattern.sub(replace_reversed_header, reversed_content)

@@ -8,6 +8,10 @@ GPT Markdown Switch has two main components. The first is a custom prompt to gen
 
 https://github.com/itsbrex/gpt-markdown-switch/assets/9772694/06700b20-5079-4a6a-845c-ce9d9c25f816
 
+<p align="center">
+<img align="center" src="https://cloud.githubusercontent.com/assets/532272/21507867/3376e9fe-cc4a-11e6-9350-7ec4f680da36.gif">
+</p>
+
 ### Why did I make this? 
 It's annoying when ChatGPT renders fenced code blocks within Markdown directly on the page, making it hard to copy everything at once. I wanted a way to create README files for my projects that I could easily copy and paste, so I created a custom prompt that tells ChatGPT to replace traditional Markdown syntax with custom syntax so it doesn't render on the page. This worked, but the custom Markdown format still needed to be converted back to regular markdown for the actual README file. To fix this, I made a Python script that automatically detects the current format and switches everything accordingly. Badabing! With GPT Markdown Switch, you can now generate full code block README files (or any other Markdown content) that are easy to copy and paste.
 ## Features

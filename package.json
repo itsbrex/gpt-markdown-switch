@@ -1,0 +1,10 @@
+{
+  "name": "gpt-markdown-toggle",
+  "version": "0.0.1",
+  "main": "index.js",
+  "author": "Brian Roach <itsbrexnpm@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "toggle-markdown": "python3 gpt_markdown_toggle.py"
+  }
+}

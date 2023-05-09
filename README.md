@@ -1,9 +1,11 @@
-<h1 align="center"> <br>GPT Markdown Switch 🪄</h1> <h4 align="center">A simple tool that enables ChatGPT to output raw markdown without rendering code blocks.</h4> <p align="center"> <a href="https://github.com/itsbrex/gpt-markdown-switch/commits/master"> <img src="https://img.shields.io/github/last-commit/itsbrex/gpt-markdown-switch.svg?style=flat-square&logo=github&logoColor=white" alt="GitHub last commit"> <a href="https://github.com/itsbrex/gpt-markdown-switch/issues"> <img src="https://img.shields.io/github/issues-raw/itsbrex/gpt-markdown-switch.svg?style=flat-square&logo=github&logoColor=white" alt="GitHub issues"> <a href="https://github.com/itsbrex/gpt-markdown-switch/pulls"> <img src="https://img.shields.io/github/issues-pr-raw/itsbrex/gpt-markdown-switch.svg?style=flat-square&logo=github&logoColor=white" alt="GitHub pull requests"> <a href="https://twitter.com/intent/tweet?text=Try this GPT Markdown Toggle:&url=https%3A%2F%2Fgithub.com%2Fgpt-markdown-switch%2Fgpt-markdown-switch"> <img src="https://img.shields.io/twitter/url/https/github.com/itsbrex/gpt-markdown-switch.svg?style=flat-square&logo=twitter" alt="GitHub tweet"> <p align="center"> <a href="#overview">Overview</a> • <a href="#requirements">Requirements</a> • <a href="#usage">Usage</a> • <a href="#features">Features</a> • <a href="#contributing">Contributing</a> • <a href="#contributors">Contributors</a> • <a href="#license">License</a> </p>
-
+<h1 align="center"> <br>GPT Markdown Switch 🪄</h1> <h4 align="center">A simple Python script to generate and convert ChatGPT-compatible Markdown that won’t render inline fenced code blocks on the page.</h4> <p align="center"> <a href="https://github.com/itsbrex/gpt-markdown-switch/commits/master"> <img src="https://img.shields.io/github/last-commit/itsbrex/gpt-markdown-switch.svg?style=flat-square&logo=github&logoColor=white" alt="GitHub last commit"> <a href="https://github.com/itsbrex/gpt-markdown-switch/issues"> <img src="https://img.shields.io/github/issues-raw/itsbrex/gpt-markdown-switch.svg?style=flat-square&logo=github&logoColor=white" alt="GitHub issues"> <a href="https://github.com/itsbrex/gpt-markdown-switch/pulls"> <img src="https://img.shields.io/github/issues-pr-raw/itsbrex/gpt-markdown-switch.svg?style=flat-square&logo=github&logoColor=white" alt="GitHub pull requests"> <a href="https://twitter.com/intent/tweet?text=Try this GPT Markdown Toggle:&url=https%3A%2F%2Fgithub.com%2Fgpt-markdown-switch%2Fgpt-markdown-switch"> <img src="https://img.shields.io/twitter/url/https/github.com/itsbrex/gpt-markdown-switch.svg?style=flat-square&logo=twitter" alt="GitHub tweet"> <p align="center"> <a href="#overview">Overview</a> • <a href="#demo">Demo</a> • <a href="#requirements">Requirements</a> • <a href="#usage">Usage</a> • <a href="#features">Features</a> • <a href="#contributing">Contributing</a> • <a href="#license">License</a> </p>
 
 ## Overview
 
 GPT Markdown Switch has two main components. The first is a custom prompt to generate *actual* single codeblock README files that can easily be copy and pasted into your project. The second is a Python script that allows you to toggle between custom markdown format and standard markdown format. The custom markdown format uses headers represented by `H1`, `H2`, `H3`, etc., triple single quotes `'''` for fenced code blocks, and single backticks for inline code snippets so that you *actually* get back single code blocks instead of multiple rendered markdown code blocks.
+
+## Demo
+<a href="gpt-switch-demo.gif"><img src="gpt-switch-demo.gif" alt="demo" /></a>
 
 ### Why did I make this? 
 It's annoying when ChatGPT renders fenced code blocks within Markdown directly on the page, making it hard to copy everything at once. I wanted a way to create README files for my projects that I could easily copy and paste, so I created a custom prompt that tells ChatGPT to replace traditional Markdown syntax with custom syntax so it doesn't render on the page. This worked, but the custom Markdown format still needed to be converted back to regular markdown for the actual README file. To fix this, I made a Python script that automatically detects the current format and switches everything accordingly. Badabing! With GPT Markdown Switch, you can now generate full code block README files (or any other Markdown content) that are easy to copy and paste.
@@ -37,8 +39,14 @@ PASTE YOUR CODE HERE
 ```
 python3 gpt_markdown_switch.py
 ```
+> Add this as an alias to your `zshrc` or `bashrc` file to run the script from anywhere: 
+`alias switch-md="python3 ~/github/gpt-markdown-switch/gpt_markdown_switch.py"`
 
 The script will automatically detect if your `README.md` is in custom markdown format or standard markdown format and convert it accordingly.
+
+## Todo
+- [x] push v1 to GitHub
+- [ ] publish to PyPi
 
 ## Contributing
 
